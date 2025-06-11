@@ -6,6 +6,7 @@ This project processes noisy OCR outputs from historical documents and evaluates
 We use BERT and BART to "logicalify" (clean up) raw OCR text from the *Records of the Virginia Company* and evaluate how much these transformations improve NER performance using spaCy.
 
 ## Project Structure 
+```
 bert_bart/
 ├── run_pipeline.py # Main runner script
 ├── models_utils.py # BERT and BART text processing functions
@@ -13,7 +14,8 @@ bert_bart/
 ├── ner_scorer.py # Scoring script for NER performance
 ├── gold.jsonl # Ground-truth annotations for evaluation
 ├── Vol1StoreOCRPerPage.json # Raw OCR input (per-page)
-└── outputs/ # Folder where cleaned outputs are stored 
+└── outputs/ # Folder where cleaned outputs are stored
+```
 
 ## How It Works
 1. **BERT** (fill-mask): Attempts to reconstruct garbled segments using token prediction.
